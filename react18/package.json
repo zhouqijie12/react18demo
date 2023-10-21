@@ -26,7 +26,12 @@
     ]
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "src/*": "prettier --write --ignore-unknown"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
