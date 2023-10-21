@@ -68,3 +68,55 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 常用片段列表
+
+imr: 引入 React import React from 'react'
+imrc: 导入 React 组件 import React, { Component } from 'react'
+imrn: 导入 Import React-Native Element import { first } from 'react-native'
+cdm: 快速生成类组件中 componentWillMount 函数componentWillMount() {}
+cdup: 快速生成类组件中 componentDidUpdate 函数componentDidUpdate(prevProps, prevState) {}
+cwm: 快速生成类组件中 componentWillMont 函数componentWillMount() {}
+cwup: 快速生成类组件中 componentWillUpdate 函数componentWillUpdate(nextProps, nextState) {}
+
+### rcc: 快捷生成类组件
+
+`import React, { Component } from "react";
+export default class test extends Component {
+  render() {
+    return ()
+  }
+}`
+
+`import React from "react";
+const test = () => {
+  return <div></div>;
+};
+export default test;`
+
+### fcc: 快捷生成类组件(附带类型声明)
+
+`import * as React from "react";
+type Props = {};
+type State = {};
+export class test extends React.Component<Props, State> {
+  render() {
+    return <div></div>;
+  }
+}`
+
+### fsc: 快捷生成函数组件(箭头函数类型)
+
+`import * as React from "react";
+type Props = {};
+export const test = (props: Props) => {
+  return <div></div>;
+};`
+
+### ednf: 生成默认导出函数
+
+`export default function first(second) {third}`
+
+### edf: 生成默认导出函数
+
+`export default (first) => {second}`
